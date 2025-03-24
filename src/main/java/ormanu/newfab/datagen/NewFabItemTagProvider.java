@@ -1,10 +1,10 @@
-package ormanu.datagen;
+package ormanu.newfab.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
-import ormanu.items.ModItems;
+import ormanu.newfab.items.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,7 +15,7 @@ public class NewFabItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
             getOrCreateTagBuilder(ItemTags.SWORDS)
-                    .add(ModItems.TEST);
+                    .add(ModItems.LongSword);
 
     }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "d": "minecraft:crying_obsidian",
+    "l": "minecraft:end_crystal",
+    "s": "minecraft:netherite_sword"
+  },
+  "pattern": [
+    "  l",
+    " d ",
+    "s  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "newfab:longsword"
+  }
+}
