@@ -35,7 +35,19 @@ public class NewFabRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.LongSword), conditionsFromItem(ModItems.LongSword))
                         .offerTo(exporter);
                 RegistryWrapper.Impl<Item> itemLookup = registries.getOrThrow(RegistryKeys.ITEM);
+                createShaped(RecipeCategory.MISC, ModItems.NewCrossbow, 1)
+                        .pattern("  l")
+                        .pattern(" d ")
+                        .pattern("o  ")
+                        .input('o', Items.CROSSBOW)
+                        .input('d', Items.CRYING_OBSIDIAN)
+                        .input('l', Items.END_CRYSTAL)
+                        .group("multi_bench") // Put it in a group called "multi_bench" - groups are shown in one slot in the recipe book
+                        .criterion(hasItem(ModItems.NewCrossbow), conditionsFromItem(ModItems.NewCrossbow))
+                        .offerTo(exporter);
+
             }
+
         };
     }
 

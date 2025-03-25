@@ -2,6 +2,7 @@ package ormanu.newfab;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import ormanu.newfab.datagen.EnchantmentGenerator;
 import ormanu.newfab.datagen.NewFabItemTagProvider;
 import ormanu.newfab.datagen.NewFabRecipeProvider;
 
@@ -12,5 +13,6 @@ public class NewFabDataGenerator implements DataGeneratorEntrypoint {
 
 		pack.addProvider(NewFabItemTagProvider::new);
 		pack.addProvider(NewFabRecipeProvider::new);
+		pack.addProvider(EnchantmentGenerator::new);
 	}
 }

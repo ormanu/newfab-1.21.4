@@ -1,4 +1,9 @@
 {
   "item.newfab.longsword": "Darkest Longsword",
+  "item.newfab.newcrossbow": "Suspicious Crossbow",
+  "effect.newfab.faster": "Faster",
+  "effect.newfab.explosive": "Explosive",
+  "enchantment.newfab.airspeed": "Airspeed",
+  "enchantment.newfab.explosivehit": "ExplosiveHit",
   "itemGroup.newfab.newfabs": "NewFabs"
 }

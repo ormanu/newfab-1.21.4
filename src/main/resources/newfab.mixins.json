@@ -3,7 +3,9 @@
 	"package": "ormanu.newfab.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"AirAcceleration",
+		"ProjectileEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
