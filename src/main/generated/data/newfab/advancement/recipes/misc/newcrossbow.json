@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_newcrossbow": {
+      "conditions": {
+        "items": [
+          {
+            "items": "newfab:newcrossbow"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "newfab:newcrossbow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_newcrossbow"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "newfab:newcrossbow"
+    ]
+  }
+}
