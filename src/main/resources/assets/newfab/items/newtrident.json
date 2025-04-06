@@ -1,0 +1,40 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "cases": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "newfab:item/newtrident_inventory"
+        },
+        "when": [
+          "gui",
+          "ground",
+          "fixed"
+        ]
+      },
+      {
+        "model": {
+          "type": "minecraft:condition",
+          "on_false": {
+            "type": "minecraft:model",
+            "model": "newfab:item/newtrident"
+          },
+          "on_true": {
+            "type": "minecraft:model",
+            "model": "newfab:item/newtrident_throwing"
+          },
+          "property": "minecraft:using_item"
+        },
+        "when": [
+          "firstperson_righthand",
+          "firstperson_lefthand",
+          "thirdperson_righthand",
+          "thirdperson_lefthand",
+          "head"
+        ]
+      }
+    ],
+    "property": "minecraft:display_context"
+  }
+}

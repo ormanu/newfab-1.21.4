@@ -1,4 +1,4 @@
-package ormanu.newfab.items;
+package ormanu.newfab.items.custom;
 
 
 import net.minecraft.entity.effect.StatusEffectInstance;

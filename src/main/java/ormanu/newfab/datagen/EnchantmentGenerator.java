@@ -11,8 +11,8 @@ import net.minecraft.enchantment.effect.EnchantmentEffectTarget;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import ormanu.newfab.enchantments.AirSpeedEffect;
-import ormanu.newfab.enchantments.ExplosiveHitEffect;
+import ormanu.newfab.enchantments.custom.AirSpeedEffect;
+import ormanu.newfab.enchantments.custom.ExplosiveHitEffect;
 import ormanu.newfab.enchantments.ModEnchantmentEffects;
 import ormanu.newfab.util.ModTags;
 

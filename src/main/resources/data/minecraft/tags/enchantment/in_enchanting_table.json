@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "newfab:airspeed"
+    "newfab:airspeed",
+    "newfab:explosivehit"
   ]
 }

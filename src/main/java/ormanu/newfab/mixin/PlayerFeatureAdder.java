@@ -12,9 +12,10 @@ import net.minecraft.util.Arm;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import ormanu.newfab.items.LongSwordItem;
+import ormanu.newfab.items.custom.LongSwordItem;
+import ormanu.newfab.items.custom.NewCrossbowItem;
+import ormanu.newfab.items.custom.ScytheItem;
 
 @Mixin(PlayerEntityRenderer.class)
 public abstract class PlayerFeatureAdder extends LivingEntityRenderer<AbstractClientPlayerEntity, PlayerEntityRenderState, PlayerEntityModel> {
@@ -29,8 +30,23 @@ public abstract class PlayerFeatureAdder extends LivingEntityRenderer<AbstractCl
             if (!player.isUsingItem() && !player.handSwinging && !player.isSneaking()) {
                 cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
             } else if (player.isSneaking() || player.handSwinging) {
+                cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
+            }
+        }
+        if (itemStack.getItem() instanceof NewCrossbowItem || itemStack.getItem() instanceof NewCrossbowItem) {
+            if (!player.isUsingItem() && !player.handSwinging && !player.isSneaking()) {
+                cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
+            } else if (player.isSneaking() || player.handSwinging) {
                 cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_HOLD);
             }
         }
+        if (itemStack.getItem() instanceof ScytheItem || itemStack.getItem() instanceof ScytheItem) {
+            if (!player.isUsingItem() && !player.handSwinging && !player.isSneaking()) {
+                cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
+            } else if (player.isSneaking() || player.handSwinging) {
+                cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
+            }
+        }
     }
+
 }

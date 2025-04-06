@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "multi_bench",
+  "group": "newfab",
   "key": {
     "d": "minecraft:crying_obsidian",
     "l": "minecraft:end_crystal",

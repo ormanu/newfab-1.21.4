@@ -1,4 +1,4 @@
-package ormanu.newfab.enchantments;
+package ormanu.newfab.enchantments.custom;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

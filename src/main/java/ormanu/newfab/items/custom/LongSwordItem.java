@@ -1,4 +1,4 @@
-package ormanu.newfab.items;
+package ormanu.newfab.items.custom;
 
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
@@ -33,28 +33,29 @@ public class LongSwordItem extends SwordItem {
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack longswordStack = user.getStackInHand(hand);
+        if (user.isSneaking()) {
+            // Check if the sword has the "airspeed" enchantment
+            if (!hasAirSpeedEnchant(longswordStack)) {
+                // Return a failure, meaning the action cannot proceed
+                return ActionResult.FAIL;
+            }
 
-        // Check if the sword has the "airspeed" enchantment
-        if (!hasAirSpeedEnchant(longswordStack)) {
-            // Return a failure, meaning the action cannot proceed
-            return ActionResult.FAIL;
-        }
+            if (!world.isClient) {
+                // Check cooldown and apply effect if allowed
+                if (!user.getItemCooldownManager().isCoolingDown(longswordStack)) {
+                    user.addStatusEffect(new StatusEffectInstance(
+                            NewFab.FasterEffect,
+                            100 // Duration: 5 seconds (100 ticks)
+                    ));
 
-        if (!world.isClient) {
-            // Check cooldown and apply effect if allowed
-            if (!user.getItemCooldownManager().isCoolingDown(longswordStack)) {
-                user.addStatusEffect(new StatusEffectInstance(
-                        NewFab.FasterEffect,
-                        100 // Duration: 5 seconds (100 ticks)
-                ));
-
-                // Set a cooldown of 6 seconds (120 ticks)
-                user.getItemCooldownManager().set(longswordStack, 120);
+                    // Set a cooldown of 6 seconds (120 ticks)
+                    user.getItemCooldownManager().set(longswordStack, 120);
+                }
             }
         }
-
-        return super.use(world, user, hand); // Perform normal right-click behavior
+            return super.use(world, user, hand); // Perform normal right-click behavior
     }
+
 
 
 

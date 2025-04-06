@@ -9,8 +9,7 @@
         },
         "when": [
           "gui",
-          "ground",
-          "fixed"
+          "ground"
         ]
       },
       {
@@ -23,7 +22,8 @@
           "firstperson_lefthand",
           "thirdperson_righthand",
           "thirdperson_lefthand",
-          "head"
+          "head",
+          "fixed"
         ]
       }
     ],

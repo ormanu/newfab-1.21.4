@@ -1,9 +1,22 @@
 {
   "item.newfab.longsword": "Darkest Longsword",
   "item.newfab.newcrossbow": "Suspicious Crossbow",
+  "item.newfab.scythe": "Darkest Scythe",
+
   "effect.newfab.faster": "Faster",
   "effect.newfab.explosive": "Explosive",
+
   "enchantment.newfab.airspeed": "Airspeed",
   "enchantment.newfab.explosivehit": "ExplosiveHit",
-  "itemGroup.newfab.newfabs": "NewFabs"
+
+  "itemGroup.newfab.newfabs": "NewFabs",
+
+  "category.newfab.keybinds": "NewFab Keys",
+  "key.newfab.backslot": "Backslot Key",
+
+  "text.autoconfig.newfab.option.backslotX": "Back Slot X Offset in HUD",
+  "text.autoconfig.newfab.option.backslotY": "Back Slot Y Offset in HUD",
+  "text.autoconfig.newfab.option.backslotSwapSoundVolume": "Slot Swap Sound Volume (%)",
+  "text.autoconfig.newfab.option.flipBackslotDisplay": "Back Slot Flipped Display",
+  "text.autoconfig.newfab.option.goodTridentReturn": "Trident returns to original slot"
 }

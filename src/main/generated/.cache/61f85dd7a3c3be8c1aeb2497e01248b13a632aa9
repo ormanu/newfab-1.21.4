@@ -1,5 +1,6 @@
 // 1.21.4	-999999999-01-01T00:00:00	NewFab/Tags for minecraft:item
 9d30b838ba7c933d02d4e9afcc1f6bbe36ba8832 data/minecraft/tags/item/enchantable/crossbow.json
-bc098e90a2d3edeb45809c049440e804adbb312c data/minecraft/tags/item/swords.json
+35b0835818ad74ddcb49982b8cf19eb5c9e1421f data/minecraft/tags/item/enchantable/trident.json
+92bc1eb7c1b10d533dfe01874ac50fc561ec72f2 data/minecraft/tags/item/swords.json
 bc098e90a2d3edeb45809c049440e804adbb312c data/newfab/tags/item/airspeedcapable.json
 9d30b838ba7c933d02d4e9afcc1f6bbe36ba8832 data/newfab/tags/item/explosivehitcapable.json

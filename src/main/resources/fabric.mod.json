@@ -3,7 +3,7 @@
 	"id": "newfab",
 	"version": "${version}",
 	"name": "NewFab",
-	"description": "NewFab is a mod for d astea mancavascoaiele",
+	"description": "NewFab is a mod that adds a few custom items with custom held animation, and new features like a backslot for you to keep your equipment ready for any fight, trident returns to original slot and more...",
 	"authors": [
 		"ormanu"
 	],
@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"ormanu.newfab.NewFabClient"
+		],
+		"modmenu": [
+			"ormanu.newfab.config.ModMenu"
 		]
 	},
 	"mixins": [

@@ -16,12 +16,16 @@ public class NewFabItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
             getOrCreateTagBuilder(ItemTags.SWORDS)
-                    .add(ModItems.LongSword);
+                    .add(ModItems.LongSword)
+                    .add(ModItems.Scythe);
             getOrCreateTagBuilder(ItemTags.CROSSBOW_ENCHANTABLE)
                     .add(ModItems.NewCrossbow);
             getOrCreateTagBuilder(ModTags.Items.AirSpeedCapable)
                     .add(ModItems.LongSword);
             getOrCreateTagBuilder(ModTags.Items.ExplosiveHitCapable)
                     .add(ModItems.NewCrossbow);
+            getOrCreateTagBuilder(ItemTags.TRIDENT_ENCHANTABLE)
+                    .add(ModItems.NewTrident);
+
     }
 }

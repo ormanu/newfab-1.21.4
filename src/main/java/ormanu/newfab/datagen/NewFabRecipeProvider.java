@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
-import net.minecraft.data.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -31,7 +30,7 @@ public class NewFabRecipeProvider extends FabricRecipeProvider {
                         .input('s', Items.NETHERITE_SWORD)
                         .input('d', Items.CRYING_OBSIDIAN)
                         .input('l', Items.END_CRYSTAL)
-                        .group("multi_bench") // Put it in a group called "multi_bench" - groups are shown in one slot in the recipe book
+                        .group("newfab") // Put it in a group called "multi_bench" - groups are shown in one slot in the recipe book
                         .criterion(hasItem(ModItems.LongSword), conditionsFromItem(ModItems.LongSword))
                         .offerTo(exporter);
                 RegistryWrapper.Impl<Item> itemLookup = registries.getOrThrow(RegistryKeys.ITEM);
@@ -42,17 +41,25 @@ public class NewFabRecipeProvider extends FabricRecipeProvider {
                         .input('o', Items.CROSSBOW)
                         .input('d', Items.CRYING_OBSIDIAN)
                         .input('l', Items.END_CRYSTAL)
-                        .group("multi_bench") // Put it in a group called "multi_bench" - groups are shown in one slot in the recipe book
+                        .group("newfab") // Put it in a group called "multi_bench" - groups are shown in one slot in the recipe book
                         .criterion(hasItem(ModItems.NewCrossbow), conditionsFromItem(ModItems.NewCrossbow))
                         .offerTo(exporter);
-
+                createShaped(RecipeCategory.MISC, ModItems.Scythe, 1)
+                        .pattern("  y")
+                        .pattern(" d ")
+                        .pattern("o  ")
+                        .input('y', Items.NETHERITE_SCRAP)
+                        .input('d', Items.CRYING_OBSIDIAN)
+                        .input('o', Items.NETHERITE_AXE)
+                        .group("newfab") // Put it in a group called "multi_bench" - groups are shown in one slot in the recipe book
+                        .criterion(hasItem(ModItems.Scythe), conditionsFromItem(ModItems.Scythe))
+                        .offerTo(exporter);
             }
-
         };
     }
 
     @Override
     public String getName() {
-        return "FabricDocsReferenceRecipeProvider";
+        return "newfab";
     }
 }

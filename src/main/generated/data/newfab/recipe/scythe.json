@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "newfab",
+  "key": {
+    "d": "minecraft:crying_obsidian",
+    "o": "minecraft:netherite_axe",
+    "y": "minecraft:netherite_scrap"
+  },
+  "pattern": [
+    "  y",
+    " d ",
+    "o  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "newfab:scythe"
+  }
+}

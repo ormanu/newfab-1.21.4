@@ -9,6 +9,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import ormanu.newfab.NewFab;
+import ormanu.newfab.enchantments.custom.AirSpeedEffect;
+import ormanu.newfab.enchantments.custom.ExplosiveHitEffect;
 
 public class ModEnchantmentEffects {
     public static final RegistryKey<Enchantment> AIRSPEED = of("airspeed");

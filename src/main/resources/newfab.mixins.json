@@ -3,14 +3,32 @@
 	"package": "ormanu.newfab.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin",
 		"AirAcceleration",
-		"ProjectileEntityMixin"
+		"ProjectileEntityMixin",
+		"ItemMixin",
+		"EntityMixin",
+		"EntityTrackerEntryMixin",
+		"MinecraftClientMixin",
+		"PlayerInventoryMixin",
+		"SlotAccessor",
+		"SlotsMixin",
+		"ServerPlayerEntityMixin",
+		"TridentMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
 	},
 	"client": [
-		"PlayerFeatureAdder"
+		"PlayerFeatureAdder",
+		"HandledScreenAccessor",
+		"PlayerEntityRendererMixin",
+		"PlayerFeaturesMixin",
+		"PlayerRenderStateMixin",
+		"PlayerCapeModelMixin",
+		"HudRendererMixin",
+		"InventoryScreenMixin",
+		"BooleanPropertyMixin",
+		"ItemRendererAccessor",
+		"NumericPropertyMixin"
 	]
 }
